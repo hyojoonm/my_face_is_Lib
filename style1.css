@@ -1,0 +1,77 @@
+@font-face {
+    src: url('./font/SDChildfundkoreaTTF.ttf');
+    font-family: abc;
+}
+
+body{
+    height: 100%; 
+    background: url(./img/back.jpg);
+    background-size:  cover;
+}
+
+body > .header{
+    height: 20vh;
+} 
+
+body > .header > p{
+    height: 100%;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: abc;
+}
+
+body > .cam{
+    height: 50vh;
+    position: relative; 
+    width: 70vh;
+    margin: 0px auto;
+}
+
+body > .cam > iframe{
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    border-radius: 15px;
+    
+    
+}
+
+body > .animation{
+    height: 30vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes count-ani {
+	from {
+		transform: translate(15vw, 0);
+	}
+	to {
+		transform: translate(75vw, 0);
+	}
+}
+
+body > .animation > .count{
+    height: 40%;
+    animation: count-ani 5s linear forwards;
+}
+
+@keyframes move-ani {
+	from {
+		transform: translate(20vw, 0);
+	}
+	to {
+		transform: translate(80vw, 0);
+	}
+}
+
+body > .animation > .move{
+    height: 60%;
+    animation: move-ani 5s linear forwards;
+}
+
+
+

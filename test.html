@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>cam</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+
+    <body>
+        <div class= "header">
+            <p>
+                감정분석중입니다 화면을 바라봐 주세요....
+            </p>
+        </div>
+        <div class="cam" >
+                <iframe src="http://localhost:8080/?action=stream" frameborder="0"></iframe>
+        </div>
+        <div class="animation">
+            <img src="./img/img5.png" id="imgBox" class="count">
+            <img src="./img/move.png" class="move">
+        </div>
+    </body>
+
+    <script>
+        var count=5;
+        var imgchange=document.getElementById('imgBox');
+        setInterval(function(){
+            count--;
+            imgchange.src='./img'+count+'.png';
+            if(count<=1){
+                clearInterval(count);
+            }
+        },1000)
+
+    </script>
+</html>
